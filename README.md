@@ -1,70 +1,101 @@
-# Getting Started with Create React App
+# <div align="center">Eenie-meenie-miney-toe</div>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+    <br>
+    <a href="https://github.com/Harzulu">
+        <img src="https://avatars3.githubusercontent.com/u/55816973?s=460&u=46b7375105009121ce5ce53643553fef0ba2be14&v=4" width="150px" height="auto">
+    </a>
+   <a href="https://github.com/besscampbell">
+        <img src="https://github.com/besscampbell.png" width="150px" height="auto">
+    </a>
+    <a href="https://github.com/Zahnen">
+        <img src="https://avatars.githubusercontent.com/u/30666043?s=400&u=9a9a473b116cbfa035b5a8cb6044e7f9751e98b1&v=4" width="150px" height="auto">
+    </a>
+</p>
 
-## Available Scripts
+<p align="center">
+  <small>Last Updated: February 16th, 2021</small>
+</p>
 
-In the project directory, you can run:
+# ℹ️ Description
 
-### `npm start`
+Note: We don't want to leave you hanging, so please be aware that this prompt is more challenging than hangman. Stick with the first prompt if you are still getting the hang of Redux.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Create a React and Redux application that allows users to play tic-tac-toe. Begin by following this highly-recommended [tutorial](https://reactjs.org/tutorial/tutorial.html) from the React documentation that walks through the creation of a non-Redux tic-tac-toe game.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Even though you already know how to make non-Redux React apps, take your time and pay careful attention to each step of this tutorial. The tutorial includes shortcuts and pieces of functionality we haven't covered such as creating helper methods to dynamically render JSX.
 
-### `npm test`
+Once you've successfully completed the tutorial, add Redux and React-Redux to your tic-tac-toe game and refactor the application to rely solely on Redux for all application state management.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## **<a href="">View a live version here!</a>**
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# 🧑‍💻 Contributers
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+| Name | GitHub Profile |
+|------|----------------|
+| [Ben McFarland](https://www.linkedin.com/in/benjamin-mcf/) | [Harzulu](https://github.com/harzulu)|
+| [Bess Campbell](https://www.linkedin.com/in/bess-campbell/) | [besscampbell](https://github.com/besscampbell)|
+| []() | []()|
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# ⚙️ Technologies Used
 
-### `npm run eject`
+* <a href="https://code.visualstudio.com/">Microsoft Visual Studio Code</a>
+* <a href="https://github.com/">Git/GitHub</a>
+* <a href="https://reactjs.org/">React.js</a>
+* <a href="w3schools.com/html/html_intro.asp">HTML</a>
+* <a href="https://webpack.js.org/">Webpack.js</a>
+* <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS">CSS</a>
+* <a href="https://getbootstrap.com/">Bootstrap</a>
+* <a href="https://nodejs.org/en/">Node.js</a>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# 💾 Installation Requirements
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## For Both Mac & Windows systems
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+#### To Clone:
+- Open your preferred command line program.
+- Navigate to the location or directory you'd like the project directory to be created in. (e.g., "cd Desktop" if you'd like to clone the project to your desktop)
+- Enter the command "$ git clone https://github.com/harzulu/tap-room" in your command line.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+#### To Download:
+- Navigate to the [project repository](https://github.com/harzulu/tap-room) in your browser.
+- Click the green "Code" button toward the top right of the page.
+- Click "Download ZIP" and extract the files.
+- Open the newly-downloaded project in your preferred code editor.
 
-## Learn More
+## **This project uses Node.js Project Manager**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# To install Node.js
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Visit <a href="https://nodejs.org/en/download/">this link</a> to find the most recent version of Node.js for your machine.
+- Follow the given instructions to install Node.js on you machine to run this project.
 
-### Code Splitting
+# 🖥️ Opening the Project on your Local System
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Once the project has been cloned and you have all the necessary items on your local computer, open the project in the application of your choice (<a href="https://code.visualstudio.com/">Visual Code Studio</a> was used and is recommended by the application builder)
 
-### Analyzing the Bundle Size
+### Run the project:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- In your terminal or command line: navigate to the root directory of the project.
+- In the root directory, run the command `npm install`.
+- After you have installed all of the dependancies, run the command `npm start` so run the project.
+- Your command line will open a server (likely "http://localhost:3000/"). Navigate to this URL in your browser to view the project.
 
-### Making a Progressive Web App
+# ☎️ Support / Contact Details
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+* [Ben McFarland](mailto:benrmcfarland@gmail.com)
+* [Bess Campbell](mailto:bess.k.campbell@gmail.com)
+* []()
 
-### Advanced Configuration
+# 🐛 Bugs / Issues
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+| Date | Error | Handled | Solution |
+| :------------- | :------------- | :------------- | :------------- |
+|  |  |  |  |
 
-### Deployment
+# ©️ License & Copyright
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Copyright (c) 2021 *_Ben McFarland, Bess Campbell, Zahnen Garner_*
