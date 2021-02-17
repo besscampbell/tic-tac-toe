@@ -5,6 +5,7 @@ describe('historyReducer', () => {
     let action;
     const currentState = [{squares: [null, null, null, null, null, null, null, null, null]}]
     const newState = [{squares: [null, null, 'X', null, null, null, null, null, null]}]
+    const historySteps = [{squares: [null, null, null, null, null, null, null, null, null]}, {squares: [null, null, 'X', null, null, null, null, null, null]}, {squares: [null, null, 'X', null, null, 'O', null, null, null]}, {squares: [null, null, 'X', null, null, 'O', null, null, 'X']}];
 
     const squareData = {
       index: 3,
@@ -29,5 +30,13 @@ describe('historyReducer', () => {
         value,
       }
       expect(historyReducer(currentState, action)).toEqual([{squares:[null, null, null, null, null, null, null, null, null]}, {squares: [null, null, null, 'X', null, null, null, null, null]}])
+    });
+
+    test('Should return history up to given past step', () => {
+      action = {
+        type: 'OLD_STEP',
+        stepNumber: 2,
+      }
+      expect(historyReducer(historySteps, action)).toEqual([{squares:[null, null, null, null, null, null, null, null, null]}, {squares: [null, null, 'X', null, null, null, null, null, null]}, {squares: [null, null, 'X', null, null, 'O', null, null, null]}]);
     });
 });
