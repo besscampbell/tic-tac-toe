@@ -1,45 +1,65 @@
 import React from 'react';
-// import Square from './Square.js';
 import Board from './Board.js';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
 export default class Game extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      history: [{
-        squares: Array(9).fill(null),
-      }],
-      xIsNext: true,
       stepNumber: 0,
     };
   }
 
   handleClick(i) {
-    const history = this.state.history.slice(0, this.state.stepNumber + 1);
+    const { dispatch } = this.props;
+    let stepNum = this.state.stepNumber;
+    const action = {
+      type: 'OLD_STEP',
+      stepNumber: stepNum,
+    }
+    dispatch(action);
+    // const history = this.state.history.slice(0, this.state.stepNumber + 1);
+    const history = this.props.history;
     const current = history[history.length - 1];
     const squares = current.squares.slice();
     if (calculateWinner(squares) || squares[i]){
       return;
     }
-    squares[i] = this.state.xIsNext ? 'X' : 'O';
+    squares[i] = this.props.xIsNext ? 'X' : 'O';
+    const action2 = {
+      type: 'ADD_MOVE',
+      index: i,
+      value: squares[i],
+    }
+    dispatch(action2);
+    const action3 = {
+      type: 'SWITCH_TURN',
+    }
+    dispatch(action3);
     this.setState({
-      history: history.concat([{
-        squares,
-      }]),
-      xIsNext: !this.state.xIsNext,
-      stepNumber: history.length,
+      // history: history.concat([{
+      //   squares,
+      // }]),
+      // xIsNext: !this.state.xIsNext,
+      stepNumber: this.props.history.length,
     });
   }
 
   jumpTo(step){
+    const { dispatch } = this.props;
+    const action = {
+      type: 'VERIFY_TURN',
+      stepNumber: step
+    }
+    dispatch(action);
     this.setState({
       stepNumber: step,
-      xIsNext: (step % 2 ) === 0
     });
   }
 
   render() {
-    const history = this.state.history;
+    const history = this.props.history;
     const current = history[this.state.stepNumber];
     const winner = calculateWinner(current.squares);
 
@@ -58,7 +78,7 @@ export default class Game extends React.Component {
     if(winner){
       status = 'Winner' + winner;
     } else {
-      status = 'Next player:' + (this.state.xIsNext ? 'X' : 'O');
+      status = 'Next player:' + (this.props.xIsNext ? 'X' : 'O');
     }
     return (
       <div className="game">
@@ -96,3 +116,17 @@ function calculateWinner(squares) {
   }
   return null;
 }
+
+Game.propTypes ={
+  history: PropTypes.array,
+  xIsNext: PropTypes.bool
+};
+
+const mapStateToProps = state => {
+  return {
+    history: state.history,
+    xIsNext: state.xIsNext
+  }
+}
+
+Game = connect(mapStateToProps)(Game);
