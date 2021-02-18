@@ -17,7 +17,6 @@ export default class Game extends React.Component {
     const history = this.props.history;
     const current = history[stepNum];
     const squares = current.squares.slice();
-    // console.log(squares);
     if (calculateWinner(squares) || squares[i]){
       return;
     }
