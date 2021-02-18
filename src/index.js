@@ -9,6 +9,7 @@ import { Provider } from 'react-redux';
 const initialState = {
   history: [{squares : Array(9).fill(null)}],
   xIsNext: true,
+  stepNumber: 0,
 }
 
 const store = createStore(
